@@ -1,0 +1,25 @@
+{
+  "name": "formapi",
+  "version": "1.0.0",
+  "main": "api/users.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "build": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "formApi"
+  },
+  "author": "harsh",
+  "license": "ISC",
+  "description": "Express API for form handling with MongoDB",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.0",
+    "serverless": "^4.14.4"
+  }
+}

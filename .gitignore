@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build outputs
+dist/
+build/
+
+# Vercel
+.vercel/
+
+# Optional npm/Yarn caches
+.npm/
+.yarn-cache/
+.pnpm-debug.log
+
+# Coverage for tests
+coverage/
+
+# Ignore debug file
+debug.log
+.vercel
