@@ -11,7 +11,9 @@ export const CreateUser = async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
     const user = await User.create({ name, email, password });
-    return res.status(201).json({ user });
+    return res
+      .status(201)
+      .json({ success: true, message: "User created successfully" });
   } catch (error) {
     return res.status(500).json({ message: "Internal server error" });
   }
@@ -33,11 +35,10 @@ export const GetUserById = async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
     return res.status(200).json(user);
-  }
-  catch (error) {
+  } catch (error) {
     return res.status(500).json({ message: "Internal server error" });
   }
-}
+};
 export const UpdateUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -51,12 +52,11 @@ export const UpdateUser = async (req, res) => {
     if (password) user.password = password;
     await user.save();
 
-    return res.status(200).json({  user });
-  }
-  catch (error) {
+    return res.status(200).json({ user });
+  } catch (error) {
     return res.status(500).json({ message: "Internal server error" });
   }
-}
+};
 export const DeleteUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -66,10 +66,7 @@ export const DeleteUser = async (req, res) => {
     }
     await user.remove();
     return res.status(200).json({ message: "User deleted successfully" });
-  }
-  catch (error) {
+  } catch (error) {
     return res.status(500).json({ message: "Internal server error" });
   }
-}
-
-
+};
